@@ -12,16 +12,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
 
-    public void handleKategori(View view) {
-        Intent intent = new Intent(this, KategoriActivity.class);
+    public void handleBerita(View view) {
+        Intent intent = new Intent(this, BeritaActivity.class);
         startActivity(intent);
     }
 
-    public void handleBerita(View view){
-        Intent intent = new Intent(this, PremierActivity.class);
-        startActivity(intent);
+    public void handleTransfer(View view) {
+    }
+
+    public void handleJadwal(View view) {
+    }
+
+    public void handleHasil(View view) {
+    }
+
+    public void handleTop(View view) {
     }
 }

@@ -16,11 +16,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.ViewHolder> {
+public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder> {
     private Context context;
     private List<Kategori> items;
 
-    public KategoriAdapter(Context context, List<Kategori> items) {
+    public BeritaAdapter(Context context, List<Kategori> items) {
         this.context = context;
         this.items = items;
     }
@@ -29,13 +29,13 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.ViewHo
 
     @NonNull
     @Override
-    public KategoriAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_kategori, parent, false);
+    public BeritaAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.item_berita, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull KategoriAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BeritaAdapter.ViewHolder holder, int position) {
             Kategori item=items.get(position);
             holder.nameText.setText(item.getName());
             Picasso.get().load(item.getLogo()).into(holder.logoImage);
