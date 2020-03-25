@@ -34,10 +34,9 @@
             android:layout_margin="8dp"
             android:layout_weight="2"
             android:gravity="center"
-            android:textSize="24sp"
+            android:textSize="18sp"
             tools:text="Club Name"
+
             />
     </LinearLayout>
-    >
-
 </androidx.cardview.widget.CardView>

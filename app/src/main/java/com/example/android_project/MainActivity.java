@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleTransfer(View view) {
+        Intent intent = new Intent(this, TransferActivity.class);
+        startActivity(intent);
     }
 
     public void handleJadwal(View view) {

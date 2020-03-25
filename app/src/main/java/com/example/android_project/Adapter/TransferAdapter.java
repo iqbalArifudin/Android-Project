@@ -16,25 +16,26 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class BeritaPremierAdapter extends RecyclerView.Adapter<BeritaPremierAdapter.ViewHolder> {
+public class TransferAdapter extends RecyclerView.Adapter<TransferAdapter.ViewHolder> {
     private Context context;
     private List<Kategori> items;
 
-    public BeritaPremierAdapter(Context context, List<Kategori> items) {
+    public TransferAdapter(Context context, List<Kategori> items) {
         this.context = context;
         this.items = items;
     }
 
     @NonNull
     @Override
-    public BeritaPremierAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.item_premier, parent, false);
+    public TransferAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.item_transfer, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BeritaPremierAdapter.ViewHolder holder, int position) {
-        Kategori item=items.get(position);
+    public void onBindViewHolder(@NonNull TransferAdapter.ViewHolder holder, int position) {
+        Kategori item = items.get(position);
+        // Atur image di baris ini, dapat menggunakan Picasso atau Glide
         holder.nameText.setText(item.getName());
         Picasso.get().load(item.getLogo()).into(holder.logoImage);
     }
@@ -49,8 +50,8 @@ public class BeritaPremierAdapter extends RecyclerView.Adapter<BeritaPremierAdap
         TextView nameText;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            logoImage=itemView.findViewById(R.id.image_logo);
-            nameText=itemView.findViewById(R.id.text_name);
+            logoImage = itemView.findViewById(R.id.image_logo);
+            nameText = itemView.findViewById(R.id.text_name);
         }
     }
 }
