@@ -19,6 +19,8 @@ import java.util.List;
 public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder> {
     private Context context;
     private List<Kategori> items;
+    private static final int LOGO_LEFT = 1;
+    private static final int LOGO_RIGHT = 2;
 
     public BeritaAdapter(Context context, List<Kategori> items) {
         this.context = context;
@@ -28,8 +30,15 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder
     @NonNull
     @Override
     public BeritaAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_berita, parent, false);
-        return new ViewHolder(view);
+        View view = null;
+        if (viewType == LOGO_LEFT) {
+            view = LayoutInflater.from(context)
+                    .inflate(R.layout.item_berita, parent, false);
+        } else if (viewType == LOGO_RIGHT) {
+            view = LayoutInflater.from(context)
+                    .inflate(R.layout.item_reversed, parent, false);
+        }
+        return new BeritaAdapter.ViewHolder(view);
     }
 
     @Override
@@ -42,6 +51,11 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder
     @Override
     public int getItemCount() {
             return (items != null) ? items.size() : 0;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return (position % 2 == 0) ? LOGO_RIGHT : LOGO_LEFT;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

@@ -31,5 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleTop(View view) {
+        Intent intent = new Intent(this, TopscoreActivity.class);
+        startActivity(intent);
     }
 }

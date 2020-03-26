@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="8dp"
     app:cardElevation="4dp"
     app:cardUseCompatPadding="true"
     >
@@ -17,16 +17,6 @@
         android:orientation="horizontal"
         >
 
-        <ImageView
-            android:id="@+id/image_logo"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            tools:srcCompat="@tools:sample/avatars"
-            />
-
         <TextView
             android:id="@+id/text_name"
             android:layout_width="0dp"
@@ -37,7 +27,15 @@
             android:textSize="18sp"
             android:textStyle="bold"
             tools:text="Club Name"
-
+            />
+        <ImageView
+            android:id="@+id/image_logo"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            tools:srcCompat="@tools:sample/avatars"
             />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

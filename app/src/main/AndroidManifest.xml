@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".BeritaActivity" />
         <activity android:name=".TransferActivity" />
+        <activity android:name=".TopscoreActivity" />
 <!--        <activity android:name=".BeritaActivity" />-->
 <!--        <activity android:name=".BeritaActivity" />-->
         <activity android:name=".MainActivity">
