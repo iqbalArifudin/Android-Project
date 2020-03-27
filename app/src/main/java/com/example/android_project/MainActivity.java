@@ -25,9 +25,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleJadwal(View view) {
+        Intent intent = new Intent(this, JadwalActivity.class);
+        startActivity(intent);
     }
 
     public void handleHasil(View view) {
+        Intent intent = new Intent(this, HasilActivity.class);
+        startActivity(intent);
     }
 
     public void handleTop(View view) {

@@ -22,7 +22,7 @@ public class TopscoreActivity extends AppCompatActivity {
         RecyclerView teamsView = findViewById(R.id.rv_teams);
 
         List<Topscore> teams = new ArrayList<>();
-        teams.add(new Topscore("https://www.galamedianews.com/media/original/200308174632-penal.jpg", "Wander Luiz","Persib Bandung","Gol : 4"));
+        teams.add(new Topscore("https://statik.tempo.co/data/2020/02/10/id_913848/913848_720.jpg", "Wander Luiz","Persib Bandung","Gol : 4"));
         teams.add(new Topscore("https://faktualnews.co/images/2020/01/beto.jpg", "Alberto 'Beto' Goncalves", "Madura United" , "Gol : 3"));
         teams.add(new Topscore("https://cdn1-production-images-kly.akamaized.net/UrcevbY8AmJ36z7jJacNOPiobBw=/0x0:0x0/640x480/filters:quality(75):strip_icc():format(jpeg):watermark(kly-media-production/assets/images/watermarks/bola/watermark-color-square-new.png,565,20,0)/kly-media-production/medias/3066496/original/099799700_1583216271-20200302IQ_Tira_Persikabo_Vs_Arema_FC_09.jpg", "Kushedya Hari Yudo","Arema FC" , "Gol : 2"));
         teams.add(new Topscore("https://images.daznservices.com/di/library/GOAL/fa/fa/javlon-guseynov-borneo-fc_4h4tf8v25ima1pn7ama0q0kwb.jpg?t=377937915&quality=60&w=1200&h=800", "Francisco Torres","Borneo FC","Gol : 2"));

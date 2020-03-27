@@ -14,6 +14,8 @@
         <activity android:name=".BeritaActivity" />
         <activity android:name=".TransferActivity" />
         <activity android:name=".TopscoreActivity" />
+        <activity android:name=".JadwalActivity" />
+        <activity android:name=".HasilActivity" />
 <!--        <activity android:name=".BeritaActivity" />-->
 <!--        <activity android:name=".BeritaActivity" />-->
         <activity android:name=".MainActivity">
