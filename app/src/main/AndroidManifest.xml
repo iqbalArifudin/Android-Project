@@ -3,6 +3,7 @@
     package="com.example.android_project">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -16,8 +17,7 @@
         <activity android:name=".TopscoreActivity" />
         <activity android:name=".JadwalActivity" />
         <activity android:name=".HasilActivity" />
-<!--        <activity android:name=".BeritaActivity" />-->
-<!--        <activity android:name=".BeritaActivity" />-->
+        <activity android:name=".BeritahasilActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
