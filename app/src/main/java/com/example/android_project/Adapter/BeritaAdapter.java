@@ -31,8 +31,6 @@ import static androidx.constraintlayout.widget.Constraints.TAG;
 public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder> {
     private Context context;
     private List<Kategori> items;
-    private static final int LOGO_LEFT = 1;
-    private static final int LOGO_RIGHT = 2;
 
     public BeritaAdapter(Context context, List<Kategori> items) {
         this.context = context;
@@ -42,14 +40,7 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder
     @NonNull
     @Override
     public BeritaAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, final int viewType) {
-        View view = null;
-        if (viewType == LOGO_LEFT) {
-            view = LayoutInflater.from(context)
-                    .inflate(R.layout.item_berita, parent, false);
-        } else if (viewType == LOGO_RIGHT) {
-            view = LayoutInflater.from(context)
-                    .inflate(R.layout.item_reversed, parent, false);
-        }
+        View view = LayoutInflater.from(context).inflate(R.layout.item_berita, parent, false);
         return new BeritaAdapter.ViewHolder(view);
     }
 
@@ -58,28 +49,23 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder
         final Kategori item=items.get(position);
         holder.nameText.setText(item.getName());
         Picasso.get().load(item.getLogo()).into(holder.logoImage);
-            //On Click
-            holder.parentLayout.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent=new Intent(context, BeritahasilActivity.class);
-                    intent.putExtra("image_url", item.getLogo());
-                    intent.putExtra("judul", item.getName());
-                    intent.putExtra("Detail", item.getDetail());
-                    context.startActivity(intent);
-                }
-            });
+        //On Click
+        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context, BeritahasilActivity.class);
+                intent.putExtra("image_url", item.getLogo());
+                intent.putExtra("judul", item.getName());
+                intent.putExtra("Detail", item.getDetail());
+                context.startActivity(intent);
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
-            return (items != null) ? items.size() : 0;
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        return (position % 2 == 0) ? LOGO_RIGHT : LOGO_LEFT;
+        return (items != null) ? items.size() : 0;
     }
 
 
