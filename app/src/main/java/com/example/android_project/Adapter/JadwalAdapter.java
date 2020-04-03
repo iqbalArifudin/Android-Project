@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.android_project.Models.jadwal;
 import com.example.android_project.R;
 import com.squareup.picasso.Picasso;
@@ -40,9 +41,9 @@ public class JadwalAdapter extends RecyclerView.Adapter<JadwalAdapter.Viewholder
         holder.tanggal.setText(item.getTanggal());
         holder.club1.setText(item.getClub1());
         holder.club2.setText(item.getClub2());
-        Picasso.get().load(item.getLogo_club1()).into(holder.logo_club1);
-        Picasso.get().load(item.getLogo_club2()).into(holder.logo_club2);
-        Picasso.get().load(item.getLogotv()).into(holder.logotv);
+        Glide.with(context).load(item.getLogo_club1()).into(holder.logo_club1);
+        Glide.with(context).load(item.getLogo_club2()).into(holder.logo_club2);
+        Glide.with(context).load(item.getLogotv()).into(holder.logotv);
     }
 
     @Override

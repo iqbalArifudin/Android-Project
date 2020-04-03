@@ -18,6 +18,8 @@
         <activity android:name=".JadwalActivity" />
         <activity android:name=".HasilActivity" />
         <activity android:name=".BeritahasilActivity" />
+        <activity android:name=".DetailtransferActivity" />
+        <activity android:name=".DetailhasilActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

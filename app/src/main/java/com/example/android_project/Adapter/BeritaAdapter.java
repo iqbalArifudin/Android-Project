@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.android_project.BeritaActivity;
 import com.example.android_project.BeritahasilActivity;
 import com.example.android_project.Models.Kategori;
@@ -48,7 +49,7 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.ViewHolder
     public void onBindViewHolder(@NonNull BeritaAdapter.ViewHolder holder, final int position) {
         final Kategori item=items.get(position);
         holder.nameText.setText(item.getName());
-        Picasso.get().load(item.getLogo()).into(holder.logoImage);
+        Glide.with(context).load(item.getLogo()).into(holder.logoImage);
         //On Click
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override

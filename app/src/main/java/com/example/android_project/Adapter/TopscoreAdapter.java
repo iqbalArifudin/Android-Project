@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.android_project.Models.Topscore;
 import com.example.android_project.R;
 import com.squareup.picasso.Picasso;
@@ -37,7 +38,7 @@ public class TopscoreAdapter extends RecyclerView.Adapter<TopscoreAdapter.ViewHo
         holder.nama.setText(item.getNama());
         holder.club.setText(item.getClub());
         holder.goal.setText(item.getGoal());
-        Picasso.get().load(item.getLogo()).into(holder.logoImage);
+        Glide.with(context).load(item.getLogo()).into(holder.logoImage);
     }
 
     @Override
